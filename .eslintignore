@@ -1,0 +1,12 @@
+package.json
+package-lock.json
+lerna.json
+node_modules
+**/build/**/*.js
+**/dist/**/*.js
+**/esm/**/*.js
+**/cjs/**/*.js
+**/umd/**/*.js
+**/*.d.ts
+**/tests/**/*.js
+**/evolve-polyfill/**/*.js

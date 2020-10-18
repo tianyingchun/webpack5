@@ -1,0 +1,12 @@
+.idea
+.DS_Store
+.rpt2_cache*
+.changelog
+
+*.log
+coverage
+
+node_modules
+packages/*/fixture
+.rpt2_cache_development
+.rpt2_cache_production
