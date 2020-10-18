@@ -1,5 +1,6 @@
 import TerserPlugin from 'terser-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 import { loadLoaders } from './loaders';
 import { join } from 'path';
@@ -30,6 +31,16 @@ export const webpackConfig: Configuration = {
     new CleanWebpackPlugin({
       verbose: true,
       cleanOnceBeforeBuildPatterns: ['webpack5/test'].map((s) => `${join(ensureSlash(s, true), '**/*')}`),
+    }),
+    // if we remove `htmlWebpackPlugin` the build is works fine.
+    // otherwise it will throw error
+    new HtmlWebpackPlugin({
+      minify: false,
+      chunks: ['webpack5/test'],
+      title: '',
+      inject: 'body',
+      template: join(__dirname, './templates/index.html'),
+      filename: 'webpack5/test/index.html',
     }),
   ],
   context: process.cwd(),

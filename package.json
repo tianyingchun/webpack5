@@ -36,7 +36,7 @@
     "cssnano": "^4.1.10",
     "cssnano-preset-advanced": "^4.0.7",
     "fast-async": "^7.0.6",
-    "html-webpack-plugin": "^5.0.0-alpha.6",
+    "html-webpack-plugin": "5.0.0-alpha.5",
     "less": "^3.12.2",
     "less-loader": "^7.0.2",
     "lodash": "^4.17.20",
